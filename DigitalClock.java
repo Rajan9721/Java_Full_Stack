@@ -1,8 +1,6 @@
 import javax.swing.*;
 
-import java.awt.Graphics;
-import java.awt.Color;
-import java.awt.Font;
+import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -39,17 +37,16 @@ public class DigitalClock extends JPanel implements Runnable{
         g.fillRoundRect(600, 210, 320, 350, 50, 50);
 
         g.setColor(Color.black);
-
         g.fillRect(620, 280, 80, 50);
         g.fillRect(710, 280, 80, 50);
         g.fillRect(800, 280, 100, 50);
         g.fillRect(620, 350, 80, 50);
         g.fillRect(710, 350, 80, 50);
         g.fillRect(800, 350, 100, 50);
-        g.fillRect(630, 470, 80, 50);
-        g.fillRect(720, 470, 80, 50);
-        g.fillRect(630, 470, 80, 50);
-        g.fillRect(810, 470, 80, 50);
+        g.fillRect(630, 475, 80, 50);
+        g.fillRect(720, 475, 80, 50);
+        g.fillRect(630, 475, 80, 50);
+        g.fillRect(810, 475, 80, 50);
         g.setColor(Color.black);
 
         g.setColor(Color.red);
@@ -66,11 +63,11 @@ public class DigitalClock extends JPanel implements Runnable{
         g.drawString("DIGITAL CLOCK", 640,450);
         g.setColor(Color.white);
         g.setFont(new Font("TimesRoman", Font.BOLD, 30));
-        g.drawString(" DD ",630,310);
-        g.drawString(" MM ",715,310);
-        g.drawString(" YYYY ",810,310);
-        g.drawString(day,650,385);
-        g.drawString(month,740,385);
+        g.drawString(" DD ",630,315);
+        g.drawString(" MM ",715,315);
+        g.drawString(" YYYY ",800,315);
+        g.drawString(day,640,385);
+        g.drawString(month,735,385);
         g.drawString(year,820,385);
         g.drawString(hour+" H",645,505);
         g.drawString(minute+" M",725,505);
@@ -98,10 +95,10 @@ public class DigitalClock extends JPanel implements Runnable{
         g.fillOval(xOrigin-5, yOrigin-5, 10, 10);
 
         // Anolog Text Format
-        g.fillRoundRect(225,540,300,50,30,30);
+        g.fillRoundRect(235,540,300,50,30,30);
         g.setColor(Color.black);
         g.setFont(new Font("TimesRoman", Font.BOLD, 30));
-        g.drawString("ANOLOG CLOCK",245,575);
+        g.drawString("ANOLOG CLOCK",255,575);
 
         //String Written Text
         g.setColor(Color.blue);
@@ -522,10 +519,16 @@ public class DigitalClock extends JPanel implements Runnable{
 
     public static void main(String[] args){
         JFrame jf = new JFrame();
+
+        Toolkit t = jf.getToolkit();
+        Dimension screenSize =t.getScreenSize();
+        int width = screenSize.width*8/10;
+        int height = screenSize.height*8/10;
+
         Color c = new Color(190,190,190);
         jf.setBackground(c);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jf.setBounds(200,100,1200,700);
+        jf.setBounds(width/8,height/12,width,height);
 
         DigitalClock dj = new DigitalClock();
         jf.getContentPane().add(dj);
