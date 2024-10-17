@@ -12,7 +12,7 @@ public class Ps{
         FileOutputStream fout = new FileOutputStream("chachi.txt");   // always create the new file
         PrintStream ps = new PrintStream(fout);
 
-        FileOutputStream fout1 = new FileOutputStream("chacha.txt", true);  // true means when we are re writes then its appends the new characters(Sentence/words)
+        FileOutputStream fout1 = new FileOutputStream("chacha.txt", true);  // true means when we are writes true then its appends the new characters(Sentence/words)
         PrintStream ps1 = new PrintStream(fout1);
 
         System.out.println("before");
