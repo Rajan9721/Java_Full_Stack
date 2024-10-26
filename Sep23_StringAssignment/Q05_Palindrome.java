@@ -9,7 +9,7 @@ public class Q05_Palindrome {
         for(int i=s.length()-1; i>=0; i--){
             str = str+s.charAt(i);
         }
-        if(str==s){
+        if(str.equals(s)){
             return true;
         }
         return false;
@@ -21,6 +21,6 @@ public class Q05_Palindrome {
 
         System.out.print("Given String is: "+s);
         System.out.println();
-        System.out.print("Number of vowel in given string is: "+palindrome(s));
+        System.out.print("Given String is palindrome : "+palindrome(s));
     }
 }

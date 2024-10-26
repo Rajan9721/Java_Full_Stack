@@ -32,6 +32,6 @@ public class Q03_CharCount {
 
         System.out.print("Number of character in given String is: "+res);
         System.out.println();
-        System.out.print("Number of character in given String is via 2nd method: "+res);
+        System.out.print("Number of character in given String is via 2nd method: "+res2);
     }
 }

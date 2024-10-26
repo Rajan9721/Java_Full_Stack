@@ -1,4 +1,4 @@
-package classExercize.io.streamTokenizer;
+package classExercize.io.characterStreamClasses.streamTokenizer;
 
 import java.io.*;
 import java.util.StringTokenizer;

@@ -9,7 +9,6 @@ public class Q13Armstrong {
         double sum = 0;
 
         while(num>0){
-            int temp = num%10;
             digit++;
             num = num/10;
         }

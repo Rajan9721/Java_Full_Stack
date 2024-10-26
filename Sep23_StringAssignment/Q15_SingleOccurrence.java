@@ -64,5 +64,7 @@ public class Q15_SingleOccurrence {
         System.out.println("Enter the String: ");
         String str = sc.nextLine();
         System.out.println("New String is: "+removeConsecutive(str));
+
+        System.out.println("Single Occurrence: "+singleOccurrence(str));
     }
 }

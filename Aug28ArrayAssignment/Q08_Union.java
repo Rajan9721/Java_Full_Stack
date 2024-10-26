@@ -26,8 +26,6 @@ public class Q08_Union {
         while(j<n){
             System.out.print(arr2[j++]+" ");
         }
-
-
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
