@@ -147,8 +147,6 @@ public class Mchat implements ActionListener {
 	class My implements Runnable{
 		DataInputStream din;
 
-
-
 		My(DataInputStream din){
 			this.din = din;
 		}
@@ -177,7 +175,5 @@ public class Mchat implements ActionListener {
 				}
 			}while(st!=null);
 		}
-
-
 	}
 }
